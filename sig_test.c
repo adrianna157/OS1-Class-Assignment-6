@@ -1,5 +1,5 @@
 /*
- * R Jesse Chaney
+ * Adrianna Guevarra
  */
 
 #ifndef _GNU_SOURCE
@@ -67,6 +67,8 @@ void sigint(int signo)
 
 }
 
+// When this called, it will terminate the program because you cannot send
+// a signal to sigkill 
 void sigkill(int signo)
 {
     printf("fail");
