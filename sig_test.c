@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
     signal(SIGINT, sigint);
     signal(SIGTERM, sigterm);
     signal(SIGUSR1, sigusr);
+    signal(SIGUSR2, sigusr);
     signal(SIGALRM, sigalrm);
     signal(SIGKILL, sigkill);
     // signal(SIGUSR2, sigusr);
@@ -71,7 +72,7 @@ void sigint(int signo)
 // a signal to sigkill 
 void sigkill(int signo)
 {
-    printf("fail");
+    printf("fail\n");
 }
 
 
@@ -89,7 +90,7 @@ void sigalrm(int sgino)
 {
     time_t current_time;
     time(&current_time);
-    printf("Your current time is: %s", ctime(&current_time) );
+    printf("Your current time is: %s\n", ctime(&current_time) );
 }
 
 
